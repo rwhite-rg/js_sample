@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Static Template</title>
+    <script src="locales.js"></script>
+    <script src="matcher.js"></script>
+  </head>
+  <body>
+    <h3>Richard White</h3>
+    <p>Show a list of matched locales in the `#matches` element as the user types into the input.</p>
+    <p>The locales are in a `LANGUAGE_BY_LOCALE` var in the locales.js file</p>
+    <h3>Example</h3>
+    <p>Locale: <input type='text' value='uzb' disabled /></p>
+      <div><ul>
+        <li>Uzbek (Arabic)</li>
+        <li>Uzbek (Arabic, Afghanistan)</li>
+        <li>Uzbek (Cyrillic)</li>
+        <li>Uzbek (Cyrillic, Uzbekistan)</li>
+        <li>Uzbek (Latin)</li>
+        <li>Uzbek (Latin, Uzbekistan)</li>
+        <li>Uzbek</li>
+      </ul></div>
+    <hr />
+    <form>
+      <label for="locale">Locale: <input type="text" name="locale" id="locale" onkeyup="findLocales()"/>
+      <div id="matches">
+      </div>
+    </form>
+  </body>
+</html>
